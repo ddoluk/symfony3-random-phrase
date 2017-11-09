@@ -1,0 +1,16 @@
+{% extends "::base.html.twig" %}
+
+{% block body -%}
+    {{ form_start(form) }}
+    {{ form_row(form.username) }}
+    {{ form_row(form.email) }}
+    {{ form_row(form.password, {
+        'attr':{
+            'value':user.password
+        }
+    }) }}
+    {{ form_row(form.isActive) }}
+    {{ form_rest(form) }}
+    <br>
+    <a href="{{ path('user_list') }}">All User</a>
+{% endblock %}

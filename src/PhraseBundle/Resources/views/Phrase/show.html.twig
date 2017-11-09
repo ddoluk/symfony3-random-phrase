@@ -1,0 +1,16 @@
+{% extends "::base.html.twig" %}
+{% block body -%}
+    Phrase: {{ phrase.phrase }}
+    <br>
+    Author: {{ phrase.author }}
+    <ul>
+        <li>
+            <a href="{{ path('phrase_list') }}">All phrases</a>
+        </li>
+        {% if app.user == phrase.owner %}
+        <li>
+            <a href="{{ path('phrase_edit', {'id':phrase.id}) }}">edit</a>
+        </li>
+        {% endif %}
+    </ul>
+{% endblock %}

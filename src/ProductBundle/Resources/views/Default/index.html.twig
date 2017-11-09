@@ -1,0 +1,5 @@
+Hello World!
+
+{% for file in pdf %}
+    <a href="{{ asset('uploads/brochures/' ~ file.brochure) }}">View brochure (PDF)</a>
+{% endfor %}

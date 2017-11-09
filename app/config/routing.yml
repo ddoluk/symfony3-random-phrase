@@ -1,0 +1,13 @@
+phrase:
+    resource: "@PhraseBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+product:
+    resource: "@ProductBundle/Controller/"
+    type:     annotation
+    prefix:   /product
+
+security:
+    resource: "@UserBundle/Controller/"
+    type:     annotation

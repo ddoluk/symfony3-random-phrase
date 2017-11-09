@@ -1,0 +1,17 @@
+{% extends "::base.html.twig" %}
+
+{% block body -%}
+    {% for user in users %}
+        {% if app.user.username != user.username %}
+            <a href="{{ path('phrase_list',{'_switch_user':user.username}) }}">{{ user.username }}</a>
+        {% else %}
+            {{ user.username }}
+        {% endif %}
+        <a href="{{ path('user_show', {'id': user.id}) }}">show</a>&nbsp;
+        <a href="{{ path('user_edit',{'id': user.id}) }}">edit</a>&nbsp;
+        <a href="{{ path('user_delete',{'id': user.id}) }}">delete</a>
+        <br>
+    {% endfor %}
+    <hr width="50%" align="left">
+    <a href="{{ path('user_new') }}">Add User</a>
+{% endblock %}

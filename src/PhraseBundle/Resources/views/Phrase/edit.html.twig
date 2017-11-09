@@ -1,0 +1,9 @@
+{% extends "::base.html.twig" %}
+
+{% block body -%}
+    {{ form_start(form) }}
+    {{ form_widget(form) }}
+    {{ form_end(form) }}
+    <br>
+    <a href="{{ path('phrase_list') }}">All phrase</a>
+{% endblock %}

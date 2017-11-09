@@ -1,0 +1,11 @@
+{% extends "::base.html.twig" %}
+{% block body -%}
+    Username: {{ user.username }}
+    <br>
+    Email: {{ user.email }}
+    <ul>
+        <li>
+            <a href="{{ path('user_list') }}">All User</a>
+        </li>
+    </ul>
+{% endblock %}
